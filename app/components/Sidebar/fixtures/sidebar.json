@@ -1,0 +1,46 @@
+[
+    {
+        "name": "MSFT",
+        "id": "msft"
+    },
+    {
+        "name": "AAPL",
+        "id": "aapl"
+    },
+    {
+        "name": "INTC",
+        "id": "intc"
+    },
+    {
+        "name": "NFLX",
+        "id": "nflx"
+    },
+    {
+        "name": "ORCL",
+        "id": "orcl"
+    },
+    {
+        "name": "CMCSA",
+        "id": "cmcsa"
+    },
+    {
+        "name": "GOOG",
+        "id": "goog"
+    },
+    {
+        "name": "LUV",
+        "id": "luv"
+    },
+    {
+        "name": "HOG",
+        "id": "hog"
+    },
+    {
+        "name": "GOOGL",
+        "id": "googl"
+    },
+    {
+        "name": "AMZN",
+        "id": "amzn"
+    }
+]

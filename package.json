@@ -1,5 +1,5 @@
 {
-  "name": "minimal-react-webpack-babel-setup",
+  "name": "BambuReact",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,17 +11,29 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
     "react-hot-loader": "^4.3.11",
-    "webpack": "^4.23.1",
+    "webpack": "^4.27.0",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
+    "glamor": "^2.20.40",
+    "history": "^4.7.2",
+    "immutable": "^4.0.0-rc.12",
     "react": "^16.6.0",
-    "react-dom": "^16.6.0"
+    "react-dom": "^16.6.0",
+    "react-grid-system": "^4.3.1",
+    "react-redux": "^5.1.1",
+    "react-router-redux": "^4.0.8",
+    "redux": "^4.0.1",
+    "redux-immutable": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^0.16.2",
+    "typography": "^0.16.17"
   }
 }
