@@ -1,7 +1,11 @@
 const webpack = require('webpack');
-
+require("babel-polyfill");
 module.exports = {
-  entry: './src/index.js',
+  // entry: './src/index.js',
+  entry: {
+    js: ['babel-polyfill', './src/index.js'],
+    vendor: ['react']
+  },
   module: {
     rules: [
       {

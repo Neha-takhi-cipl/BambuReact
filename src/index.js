@@ -1,21 +1,26 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import createHistory from 'history/createBrowserHistory';
+import { Route, Switch } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
 import configureStore from '../app/configureStore';
-// import rootReducer from './reducers'
+import { ConnectedRouter } from 'react-router-redux';
 import App from '../app/containers/App';
 
-//const store = createStore(rootReducer)
-// Create redux store with history
 const initialState = {};
-const history = createHistory();
+const history = createBrowserHistory();
+
 const store = configureStore(initialState, history);
 
 render(
   <Provider store={store}>
-    <App />
+    <ConnectedRouter history={history}>
+      <div> 
+        <Switch>
+          <Route exact path="/" component={App} />
+        </Switch>
+      </div>
+    </ConnectedRouter> 
   </Provider>,
   document.getElementById('app')
 )

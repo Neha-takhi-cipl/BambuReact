@@ -2,7 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { css, merge } from "glamor";
 import styles from './styles';
-
+import { createStructuredSelector } from 'reselect';
+import { connect } from 'react-redux';
+import { compose } from 'redux';
 import {
     Header,
     Footer,
@@ -13,8 +15,24 @@ import {
     OHLC,
     LineChart
 } from 'components';
+import injectSaga from 'utils/injectSaga';
+import injectReducer from 'utils/injectReducer';
+import reducer from './reducer';
+import saga from './saga';
+import * as acctions from './actions';
+import config from './config';
+import {
+    makeSelectApp,
+  } from './selectors';
 
 class App extends React.Component {
+    constructor(props){
+        super(props)
+    }
+    componentDidMount(){
+        const { getChartAllData, appStore } = this.props;
+        getChartAllData();
+    }
     randomArray = (total = 10) => {
         let data = []
         for (let element = 0; element < total; element++) {
@@ -31,6 +49,7 @@ class App extends React.Component {
         console.log("id is", id);
     }
     render() {
+        console.log('render data come ?', this.props.appStore);
         return (
             <div {...css(styles)}>
                 <Header />
@@ -50,8 +69,28 @@ class App extends React.Component {
         )
     }
 }
-App.propTypes = {
+App.propTypes = {  }
 
-}
-
-export default App
+const mapStateToProps = createStructuredSelector({
+    appStore: makeSelectApp(),
+  });
+  
+  function mapDispatchToProps(dispatch) {
+    return {
+        getChartAllData: () => dispatch(acctions.getChartAllData()),
+    };
+  }
+  
+  const withConnect = connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  );
+  
+  const withReducer = injectReducer({ key:config.reducer.name, reducer });
+  const withSaga = injectSaga({ key:config.reducer.name, saga });
+  
+  export default compose(
+    withReducer,
+    withSaga,
+    withConnect,
+  )(App);
