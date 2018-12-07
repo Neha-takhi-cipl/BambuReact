@@ -49,7 +49,7 @@ class App extends React.Component {
         console.log("id is", id);
     }
     render() {
-        console.log('render data come ?', this.props.appStore);
+        // console.log('render data come ?', this.props.appStore);
         return (
             <div {...css(styles)}>
                 <Header />
@@ -59,8 +59,8 @@ class App extends React.Component {
                             <Sidebar onClick={(id) => this.handleStockClick(id)} />
                         </GridCol>
                         <GridCol sm={8}>
-                            <OHLC />
-                            <LineChart data={this.randomArray()} />
+                            <OHLC data={this.props.appStore}/>
+                            {/* <LineChart data={this.randomArray()} /> */}
                         </GridCol>
                     </GridRow>
                 </GridContainer>

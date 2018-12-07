@@ -18,7 +18,8 @@ function* getAllAPIData() {
   
   try {
     const response = yield call(request, requestURL, requestOptions);
-     yield put(actions.getChartAllDataFullFill(response));
+    const res = response['Time Series (Daily)'];
+     yield put(actions.getChartAllDataFullFill(res));
   } catch (error) {
     yield put(actions.getChartAllDataRejected(error.message));
   }
