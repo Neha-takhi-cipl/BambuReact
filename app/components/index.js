@@ -1,7 +1,7 @@
 import Header from "components/Header";
 import Footer from "components/Footer";
 import Sidebar from "components/Sidebar";
-import { OHLC, LineChart } from "components/Chart";
+import { OHLC, LineChart, OHLCChart } from "components/Chart";
 
 import {
     GridContainer,
@@ -16,5 +16,6 @@ export {
     GridRow,
     GridCol,
     OHLC,
-    LineChart
+    LineChart,
+    OHLCChart
 };

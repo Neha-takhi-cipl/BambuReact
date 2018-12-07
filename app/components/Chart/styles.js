@@ -34,12 +34,15 @@ const styles = css({
     }
 });
 const lineStyles = css({
-    "& .linechart_path": {
+    "display": "flex",
+    "justifyContent": "center",
+    // "background": "grey",
+    "& .OHLCChart_path": {
         strokeWidth: 2,
         fill: 'none'
     },
 
-    "& .linechart_axis": {
+    "& .OHLCChart_axis": {
         stroke: '#000000'
     }
 });
