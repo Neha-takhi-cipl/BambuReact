@@ -2,6 +2,7 @@ import { css } from "glamor";
 import { Colors, Metrics } from "../../theme";
 
 const styles = css({
+    "& .graph":{  width: '100%' },
     "& .graph .labels.x-labels": {
         textAnchor: 'middle'
     },
