@@ -59,7 +59,7 @@ class App extends React.Component {
                             <Sidebar onClick={(id) => this.handleStockClick(id)} />
                         </GridCol>
                         <GridCol sm={8}>
-                            <OHLC />
+                            <OHLC data={this.props.appStore}/>
                             <LineChart data={this.randomArray()} />
                         </GridCol>
                     </GridRow>
