@@ -81,25 +81,14 @@ class OHLC extends React.Component {
                     <g className="grid y-grid" id="yGrid">
                         <line x1="50" x2={chartBox.width ? (chartBox.width-50) : 0} y1={chartBox.height ? (chartBox.height-50): 0} y2={chartBox.height ? (chartBox.height-50) : 0}></line>
                     </g>
-                    {/* <g className="grid x-grid" id="xGrid">
-                        <line x1={chartBox.width ? (chartBox.width-50)/2 : 50 } x2={chartBox.width ? (chartBox.width-50)/2 : 50 } y1={chartBox.height ? (chartBox.height-40): 0} y2={chartBox.height ? (chartBox.height-60) : 0}></line>
-                    </g> */}
-
                     <g className="labels x-labels">
-                        {
-                            this.XaxisText()
-                        }
-                        
+                        { this.XaxisText() }
                     </g>
                     <g className="labels y-labels">
-                        {
-                           this.YaxisText()
-                        }
+                        { this.YaxisText() }
                     </g>
                     <g className="grid x-grid">
-                        {
-                           this.GraphPlot()
-                        }
+                        { this.GraphPlot() }
                     </g>
                 </svg>
             </div>
