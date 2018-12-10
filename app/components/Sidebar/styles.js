@@ -14,5 +14,8 @@ const styles = css({
             "cursor": "pointer"
         }
     },
+    '& .active': {
+        "background": Colors.deepGreen
+    }
 });
 export default styles;

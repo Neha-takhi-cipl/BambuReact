@@ -1,15 +1,15 @@
 [
     {
+        "name": "INTC",
+        "id": "intc"
+    },
+    {
         "name": "MSFT",
         "id": "msft"
     },
     {
         "name": "AAPL",
         "id": "aapl"
-    },
-    {
-        "name": "INTC",
-        "id": "intc"
     },
     {
         "name": "NFLX",
